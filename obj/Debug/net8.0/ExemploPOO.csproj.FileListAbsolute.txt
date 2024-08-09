@@ -12,3 +12,4 @@ C:\Users\daluz\source\repos\ExemploPOO\ExemploPOO\obj\Debug\net8.0\refint\Exempl
 C:\Users\daluz\source\repos\ExemploPOO\ExemploPOO\obj\Debug\net8.0\ExemploPOO.pdb
 C:\Users\daluz\source\repos\ExemploPOO\ExemploPOO\obj\Debug\net8.0\ExemploPOO.genruntimeconfig.cache
 C:\Users\daluz\source\repos\ExemploPOO\ExemploPOO\obj\Debug\net8.0\ref\ExemploPOO.dll
+C:\Users\daluz\source\repos\ExemploPOO\ExemploPOO\obj\Debug\net8.0\ExemploPOO.sourcelink.json

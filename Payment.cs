@@ -11,13 +11,23 @@ namespace ExemploPOO
         Student Student;
         DateTime PayDay;
         Contract Contract;
+        private bool validContract;
 
         public Payment(Student student, DateTime payDay, Contract contract)
         {
             Student = student;
             PayDay = payDay;
             Contract = contract;
-            Console.WriteLine("Contrato pago!");
+            
+        }
+
+        public void PaymentOK(Contract contract)
+        {
+            validContract = contract.Active;
+            if (validContract)
+            {
+                Console.WriteLine("Contrato pago!");
+            }
         }
     }
 }

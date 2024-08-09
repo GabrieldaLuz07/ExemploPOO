@@ -15,9 +15,11 @@ namespace ExemploPOO
             personal.Introduce();
 
             Contract contract = new Contract(12, modality, false);
+            contract.Activate();
 
             Payment payment = new Payment(student, DateTime.Now, contract);
-            contract.Activate();
+            payment.PaymentOK(contract);
+            
 
 
         }

@@ -10,7 +10,7 @@ namespace ExemploPOO
     {
         int Months;
         Modality Modality;
-        bool Active;
+        public bool Active;
 
         public override void Activate()
         {
