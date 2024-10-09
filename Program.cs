@@ -18,7 +18,7 @@ namespace ExemploPOO
             contract.Activate();
 
             Payment payment = new Payment(student, DateTime.Now, contract);
-            payment.PaymentOK(contract);
+            payment.ProcessPayment();
             
 
 

@@ -8,26 +8,35 @@ namespace ExemploPOO
 {
     public class Payment : Contract
     {
-        Student Student;
-        DateTime PayDay;
-        Contract Contract;
-        private bool validContract;
+        private readonly Student _student;
+        private readonly Contract _contract;
+        private readonly DateTime _payDay;
 
         public Payment(Student student, DateTime payDay, Contract contract)
         {
-            Student = student;
-            PayDay = payDay;
-            Contract = contract;
-            
+            // Injeção de Dependência
+            _student = student ?? throw new ArgumentNullException(nameof(student));
+            // Injeção de Dependência
+            _contract = contract ?? throw new ArgumentNullException(nameof(contract));
+            _payDay = payDay;
         }
 
-        public void PaymentOK(Contract contract)
+        public void ProcessPayment()
         {
-            validContract = contract.Active;
-            if (validContract)
+            // Extração de Método
+            if (!IsContractValid())
             {
-                Console.WriteLine("Contrato pago!");
+                Console.WriteLine("O contrato não é válido para pagamento.");
+                return;
             }
+
+            Console.WriteLine($"Pagamento processado para o estudante {_student.GetName()} na data {_payDay.ToShortDateString()}.");
+        }
+
+        private bool IsContractValid()
+        {
+            // Extração de Método
+            return _contract.Active;
         }
     }
 }

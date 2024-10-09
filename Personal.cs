@@ -23,8 +23,11 @@ namespace ExemploPOO
             Cref = cref;
         }
 
-        public string GetName() { return Name; }
+        public string GetName() => Name;
 
-        public void Introduce() { Console.WriteLine($"Sou o personal {Name}, prazer."); }
+        public void Introduce() 
+        { 
+            Console.WriteLine($"Sou o personal {Name}, prazer.");
+        }
     }
 }
